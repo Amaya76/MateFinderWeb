@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MateFinder — Build your Mythic+ group on Discord</title>
+<meta name="description" content="MateFinder turns your Discord server into a Mythic+ hub: post your keystone, fill your roster and get group alerts right in your channels.">
+<meta name="theme-color" content="#0a0b0f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⚔️</text></svg>">
+<meta property="og:title" content="MateFinder — Build your Mythic+ group on Discord">
+<meta property="og:description" content="Post your keystone, fill your roster and get group alerts right in your Discord channels.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-ink text-zinc-300 antialiased selection:bg-brand/30 selection:text-white">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-white" data-i18n="skip">Skip to content</a>
+
+<!-- ══════════ Header ══════════ -->
+<header class="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-ink/80 backdrop-blur-xl">
+  <div class="mx-auto flex h-16 max-w-6xl items-center gap-4 px-5 sm:px-6">
+    <a href="#" class="flex items-center gap-2.5 text-white">
+      <svg viewBox="0 0 24 24" class="h-6 w-6 text-brand-light" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14.5 3.5h6v6"/><path d="M20.5 3.5 10 14"/><path d="m7.5 13.5 3 3"/><circle cx="6" cy="18" r="3"/>
+      </svg>
+      <span class="text-[15px] font-semibold tracking-tight">MateFinder</span>
+    </a>
+
+    <nav class="ml-auto hidden items-center gap-1 md:flex" aria-label="Main">
+      <a href="#features" class="nav-link" data-i18n="nav.features">Features</a>
+      <a href="#install" class="nav-link" data-i18n="nav.install">Install</a>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-2 md:ml-0">
+      <div class="flex items-center rounded-full border border-white/10 bg-white/[0.03] p-0.5 text-xs font-medium" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="lang-btn">EN</button>
+        <button type="button" data-lang="fr" class="lang-btn">FR</button>
+      </div>
+      <a data-link="invite" href="#" class="btn-primary hidden h-9 px-4 text-[13px] sm:inline-flex" data-i18n="cta.add">Add to Discord</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="pt-16">
+
+  <!-- ══════════ Hero ══════════ -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute left-1/2 top-[-16rem] h-[34rem] w-[64rem] -translate-x-1/2 rounded-full bg-brand/15 blur-[130px]"></div>
+    <div class="pointer-events-none absolute inset-0 bg-grid [mask-image:radial-gradient(60%_55%_at_50%_15%,#000,transparent)]"></div>
+
+    <div class="relative mx-auto max-w-6xl px-5 pb-20 pt-20 sm:px-6 sm:pb-28 sm:pt-28">
+      <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-zinc-400">
+        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+        <span data-i18n="hero.badge">Free · Runs entirely inside Discord</span>
+      </p>
+
+      <h1 class="mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl">
+        <span data-i18n="hero.title">Build your Mythic+ group</span>
+        <span class="text-brand-light" data-i18n="hero.titleAccent">in seconds.</span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg" data-i18n="hero.sub">
+        MateFinder turns your Discord server into a keystone hub — post your key, fill your roster, and get group alerts right in your channels.
+      </p>
+
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <a data-link="invite" href="#" class="btn-primary h-12 px-6 text-sm">
+          <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="currentColor" aria-hidden="true"><path d="M20.3 4.6A19.8 19.8 0 0 0 15.4 3l-.3.5c1.7.4 2.9 1 4.2 1.9a15.9 15.9 0 0 0-12.6 0C8 4.5 9.4 3.9 11 3.5L10.6 3a19.7 19.7 0 0 0-4.9 1.6C2.6 9.3 1.8 13.9 2.2 18.4a19.9 19.9 0 0 0 6 3l1.3-2c-1-.4-1.9-.8-2.7-1.4l.6-.4a14.2 14.2 0 0 0 12.2 0l.6.4c-.8.6-1.8 1-2.7 1.4l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.8-3.5-13.8ZM8.9 15.6c-1.2 0-2.1-1.1-2.1-2.4 0-1.3 1-2.4 2.1-2.4 1.2 0 2.2 1.1 2.2 2.4 0 1.3-1 2.4-2.2 2.4Zm6.2 0c-1.2 0-2.1-1.1-2.1-2.4 0-1.3.9-2.4 2.1-2.4 1.2 0 2.2 1.1 2.1 2.4 0 1.3-.9 2.4-2.1 2.4Z"/></svg>
+          <span data-i18n="cta.add">Add to Discord</span>
+        </a>
+        <a data-link="discord" href="#" class="btn-ghost h-12 px-6 text-sm" data-i18n="cta.community">Join the community</a>
+      </div>
+
+      <dl class="mt-16 grid max-w-2xl grid-cols-3 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10">
+        <div class="bg-ink px-4 py-4 sm:px-5">
+          <dt class="text-xs text-zinc-500" data-i18n="stat.1.k">Setup time</dt>
+          <dd class="mt-1 text-lg font-semibold text-white" data-i18n="stat.1.v">&lt; 30 s</dd>
+        </div>
+        <div class="bg-ink px-4 py-4 sm:px-5">
+          <dt class="text-xs text-zinc-500" data-i18n="stat.2.k">Config files</dt>
+          <dd class="mt-1 text-lg font-semibold text-white" data-i18n="stat.2.v">None</dd>
+        </div>
+        <div class="bg-ink px-4 py-4 sm:px-5">
+          <dt class="text-xs text-zinc-500" data-i18n="stat.3.k">Price</dt>
+          <dd class="mt-1 text-lg font-semibold text-white" data-i18n="stat.3.v">Free</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ Features ══════════ -->
+  <section id="features" class="scroll-mt-20 border-t border-white/5 py-20 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6">
+      <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl" data-i18n="features.title">Everything your keys need</h2>
+      <p class="mt-3 max-w-lg text-zinc-400" data-i18n="features.sub">No dashboard, no spreadsheet, no third-party site. Just your Discord, done right.</p>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-3">
+        <article class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5h6v6"/><path d="M20.5 3.5 10 14"/><path d="m7.5 13.5 3 3"/><circle cx="6" cy="18" r="3"/></svg>
+          </div>
+          <h3 class="mt-5 font-medium text-white" data-i18n="feat.1.t">Post your keystone</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400" data-i18n="feat.1.d">Share your dungeon, key level and the roles you still need in one click — instead of a wall of copy-pasted messages.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          </div>
+          <h3 class="mt-5 font-medium text-white" data-i18n="feat.2.t">Alerts in your channels</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400" data-i18n="feat.2.d">Your roster fills up in real time and MateFinder posts the updates right where your members already are.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 9-12h-7z"/></svg>
+          </div>
+          <h3 class="mt-5 font-medium text-white" data-i18n="feat.3.t">Zero setup</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400" data-i18n="feat.3.d">Invite the bot and launch it straight from the message bar. Nothing to host, nothing to configure.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Install ══════════ -->
+  <section id="install" class="scroll-mt-20 border-t border-white/5 py-20 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">
+
+        <div class="lg:sticky lg:top-24 lg:self-start">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-brand-light" data-i18n="install.kicker">Installation guide</p>
+          <h2 class="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl" data-i18n="install.title">⚔️ Install MateFinder on your Discord server</h2>
+          <p class="mt-4 text-zinc-400" data-i18n="install.lead">Add the bot directly to your server to organize your Mythic+ keys and receive group alerts in your channels.</p>
+
+          <div class="mt-7 rounded-xl border border-brand/25 bg-brand/[0.07] p-5">
+            <p class="text-sm font-medium text-white" data-i18n="install.linkTitle">🔗 Direct invite link</p>
+            <a data-link="invite" href="#" class="btn-primary mt-4 h-11 w-full px-5 text-sm" data-i18n="install.linkCta">Add MateFinder to my server</a>
+          </div>
+        </div>
+
+        <div class="space-y-12">
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500" data-i18n="install.howTitle">⚙️ How to install it</h3>
+            <ol class="mt-6 space-y-px overflow-hidden rounded-xl border border-white/10 bg-white/10">
+              <li class="step"><span class="step-n">1</span><p data-i18n-html="install.s1">Click the invite link above.</p></li>
+              <li class="step"><span class="step-n">2</span><p data-i18n-html="install.s2">In the <b class="text-white">Add to server</b> dropdown, choose the Discord server you want to install it on.</p></li>
+              <li class="step"><span class="step-n">3</span><p data-i18n-html="install.s3">Click <b class="text-white">Continue</b>, leave the permissions checked, then click <b class="text-white">Authorize</b>.</p></li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500" data-i18n="install.useTitle">🚀 How to use it afterwards</h3>
+            <ol class="mt-6 space-y-px overflow-hidden rounded-xl border border-white/10 bg-white/10">
+              <li class="step"><span class="step-n">1</span><p data-i18n-html="install.u1">Open any channel on your server.</p></li>
+              <li class="step"><span class="step-n">2</span><p data-i18n-html="install.u2">Click the <b class="text-white">Apps</b> icon on the far right of the message bar (the geometric shapes).</p></li>
+              <li class="step"><span class="step-n">3</span><p data-i18n-html="install.u3">Select <b class="text-white">MateFinder</b> to launch the app and build your group.</p></li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Community ══════════ -->
+  <section class="border-t border-white/5 py-20 sm:py-24">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6">
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-12 text-center sm:px-12">
+        <div class="pointer-events-none absolute left-1/2 top-full h-72 w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/20 blur-[100px]"></div>
+        <div class="relative">
+          <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl" data-i18n="community.title">Join the MateFinder community</h2>
+          <p class="mx-auto mt-3 max-w-md text-zinc-400" data-i18n="community.sub">Find groups, share your feedback and follow every update on our Discord server.</p>
+          <a data-link="discord" href="#" class="btn-primary mt-8 h-12 px-6 text-sm">
+            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="currentColor" aria-hidden="true"><path d="M20.3 4.6A19.8 19.8 0 0 0 15.4 3l-.3.5c1.7.4 2.9 1 4.2 1.9a15.9 15.9 0 0 0-12.6 0C8 4.5 9.4 3.9 11 3.5L10.6 3a19.7 19.7 0 0 0-4.9 1.6C2.6 9.3 1.8 13.9 2.2 18.4a19.9 19.9 0 0 0 6 3l1.3-2c-1-.4-1.9-.8-2.7-1.4l.6-.4a14.2 14.2 0 0 0 12.2 0l.6.4c-.8.6-1.8 1-2.7 1.4l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.8-3.5-13.8ZM8.9 15.6c-1.2 0-2.1-1.1-2.1-2.4 0-1.3 1-2.4 2.1-2.4 1.2 0 2.2 1.1 2.2 2.4 0 1.3-1 2.4-2.2 2.4Zm6.2 0c-1.2 0-2.1-1.1-2.1-2.4 0-1.3.9-2.4 2.1-2.4 1.2 0 2.2 1.1 2.1 2.4 0 1.3-.9 2.4-2.1 2.4Z"/></svg>
+            <span data-i18n="cta.community">Join the community</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════ Footer ══════════ -->
+<footer class="border-t border-white/5 py-10">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 sm:flex-row sm:items-center sm:px-6">
+    <p class="text-sm text-zinc-500">&copy; <span id="year">2026</span> MateFinder</p>
+    <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm sm:ml-auto">
+      <a data-link="discord" href="#" class="text-zinc-400 transition-colors hover:text-white">Discord</a>
+      <a href="#install" class="text-zinc-400 transition-colors hover:text-white" data-i18n="nav.install">Install</a>
+    </nav>
+  </div>
+  <p class="mx-auto mt-6 max-w-6xl px-5 text-xs leading-relaxed text-zinc-600 sm:px-6" data-i18n="footer.legal">Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment, Inc.</p>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
